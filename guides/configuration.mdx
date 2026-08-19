@@ -1,0 +1,86 @@
+---
+title: 'Configuring Angoliuk for Your Project'
+sidebarTitle: 'Configuration'
+description: 'Learn how to customize Angoliuk settings including colors, fonts, navigation structure, and project metadata to match your brand.'
+---
+
+Angoliuk gives you full control over how your documentation looks and behaves. You can customize everything from your project's name and URL to its color palette, fonts, and sidebar layout — ensuring your docs feel like a natural extension of your brand rather than a generic template.
+
+## Project Settings
+
+Start by filling in the core details that identify your project. These settings appear across your documentation site and help both readers and search engines understand what your project is about.
+
+| Setting     | Description                                      | Example                     |
+| ----------- | ------------------------------------------------ | --------------------------- |
+| Name        | The display name of your project                 | `Angoliuk Docs`             |
+| Description | A short summary of what your project does        | `Simple, clean documentation` |
+| URL         | The base URL where your documentation is hosted  | `https://docs.angoliuk.com` |
+
+## Appearance
+
+Angoliuk lets you define a primary color palette and choose custom fonts to keep your documentation visually consistent with your brand. Your primary color drives interactive elements like links, buttons, and highlights, while light and dark variants ensure everything looks great in both light and dark mode.
+
+Below is a minimal example of a color configuration:
+
+```json
+{
+  "colors": {
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4338CA"
+  }
+}
+```
+
+## Navigation Structure
+
+Your sidebar is built from three nested elements: **tabs**, **groups**, and **pages**. Tabs create the top-level sections of your documentation, groups organize related pages within each tab, and pages are the individual MDX files your readers navigate to. You define this entire structure in your project configuration file, giving you precise control over the order and hierarchy of every item.
+
+Here's an example navigation object:
+
+```json
+{
+  "navigation": [
+    {
+      "tab": "Guides",
+      "groups": [
+        {
+          "group": "Getting Started",
+          "pages": ["guides/overview", "guides/configuration"]
+        },
+        {
+          "group": "Advanced",
+          "pages": ["guides/custom-domains", "guides/versioning"]
+        }
+      ]
+    },
+    {
+      "tab": "API Reference",
+      "groups": [
+        {
+          "group": "Endpoints",
+          "pages": ["api-reference/introduction", "api-reference/authentication"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+<Warning>
+  Always preview your changes before publishing to ensure everything looks correct.
+</Warning>
+
+## Configuration Options
+
+<AccordionGroup>
+  <Accordion title="Can I use custom fonts?">
+    Yes, Angoliuk supports custom font configuration. You can specify font families for your headings and body text directly in your project configuration file. Angoliuk loads the fonts automatically, so there's no need to manage external stylesheet imports yourself.
+  </Accordion>
+  <Accordion title="How do I add a logo?">
+    Upload your logo in the project settings panel under the **Appearance** section. Angoliuk accepts common image formats and automatically places your logo in the header. You can supply separate assets for light and dark mode to ensure your logo always looks sharp.
+  </Accordion>
+  <Accordion title="Can I use a custom domain?">
+    Yes, you can configure a custom domain from the project settings under the **Domain** section. Point your DNS records to Angoliuk's servers, enter your domain in the settings panel, and Angoliuk handles SSL provisioning automatically so your docs are served securely.
+  </Accordion>
+</AccordionGroup>

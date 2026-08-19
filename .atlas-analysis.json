@@ -1,0 +1,32 @@
+{
+  "projectType": "general",
+  "projectName": "Angoliuk",
+  "projectDescription": "A simple, clean documentation template to help you get started quickly.",
+  "theme": "willow",
+  "primaryColor": "#6366F1",
+  "lightColor": "#818CF8",
+  "darkColor": "#4338CA",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Guides",
+            "pages": ["guides/overview", "guides/configuration"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Simple setup and configuration",
+    "Clean, minimal documentation structure",
+    "Easy customization"
+  ],
+  "publicApiSurface": []
+}

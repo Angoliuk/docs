@@ -1,0 +1,64 @@
+---
+title: 'Angoliuk Features and Core Concepts Overview'
+sidebarTitle: 'Overview'
+description: 'Explore the core features and concepts in Angoliuk, including content organization, navigation, and publishing workflows.'
+---
+
+This overview walks you through the key features and concepts you need to know to use Angoliuk effectively. Whether you're setting up your first project or refining an existing one, understanding how content organization, navigation, and publishing work together will help you build clear, well-structured documentation.
+
+## Content Organization
+
+In Angoliuk, your documentation is built from **pages** — individual MDX files that hold your written content. You group related pages together into **groups**, which keep your docs logically structured and easy to navigate. Nesting groups lets you model even complex content hierarchies without losing clarity.
+
+<Tip>
+  Keep each group focused on a single topic or workflow. Smaller, purposeful groups are easier for readers to scan and for you to maintain as your documentation grows.
+</Tip>
+
+## Navigation
+
+Angoliuk's sidebar is shaped by **navigation tabs** and **groups** that you define in your project configuration. Tabs create top-level sections, and groups within each tab organize your pages into a clear hierarchy. This structure gives readers an at-a-glance map of everything your documentation covers.
+
+Here's an example of a simple navigation structure:
+
+```json
+{
+  "navigation": [
+    {
+      "tab": "Guides",
+      "groups": [
+        {
+          "group": "Getting Started",
+          "pages": ["guides/overview", "guides/configuration"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Publishing
+
+When you're ready to share your documentation, Angoliuk walks you through a straightforward publishing workflow. Start by previewing your changes to catch any issues before they go live, then submit for review to get a second set of eyes on your content. Once everything looks right, publish with a single action and your docs are immediately available to your audience.
+
+## Core Concepts
+
+<CardGroup cols={2}>
+  <Card title="Pages" icon="file-lines">
+    The building blocks of your documentation
+  </Card>
+  <Card title="Groups" icon="folder">
+    Organize pages into logical sections
+  </Card>
+  <Card title="Navigation" icon="bars">
+    Control the sidebar structure
+  </Card>
+  <Card title="Publishing" icon="globe">
+    Share your docs with the world
+  </Card>
+</CardGroup>
+
+## Next Step
+
+<Card title="Configure Angoliuk" icon="gear" href="/guides/configuration">
+  Set up your project settings, appearance, and navigation structure to match your brand.
+</Card>
