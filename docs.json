@@ -9,18 +9,11 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": ["introduction", "quickstart"]
-          },
-          {
-            "group": "Guides",
-            "pages": ["guides/overview", "guides/configuration"]
-          }
+        "group": "Guides",
+        "pages": [
+          "guides/getting-started"
         ]
       }
     ]
