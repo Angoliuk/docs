@@ -19,7 +19,11 @@
           },
           {
             "group": "Guides",
-            "pages": ["guides/overview", "guides/configuration"]
+            "pages": [
+              "guides/overview",
+              "guides/configuration",
+              "guides/getting-started"
+            ]
           }
         ]
       }
