@@ -1,7 +1,7 @@
 ---
-title: 'Configuring Angoliuk for Your Project'
+title: 'Configuring Angoliuk Settings for Your Documentation Project'
 sidebarTitle: 'Configuration'
-description: 'Learn how to customize Angoliuk settings including colors, fonts, navigation structure, and project metadata to match your brand.'
+description: 'Learn how to customize Angoliuk settings including colors, fonts, navigation structure, and project metadata to match your own brand.'
 ---
 
 Angoliuk gives you full control over how your documentation looks and behaves. You can customize everything from your project's name and URL to its color palette, fonts, and sidebar layout — ensuring your docs feel like a natural extension of your brand rather than a generic template.
@@ -36,7 +36,7 @@ Below is a minimal example of a color configuration:
 
 Your sidebar is built from three nested elements: **tabs**, **groups**, and **pages**. Tabs create the top-level sections of your documentation, groups organize related pages within each tab, and pages are the individual MDX files your readers navigate to. You define this entire structure in your project configuration file, giving you precise control over the order and hierarchy of every item.
 
-Here's an example navigation object:
+Here's a minimal example of a navigation configuration with a single tab and group:
 
 ```json
 {
@@ -47,19 +47,6 @@ Here's an example navigation object:
         {
           "group": "Getting Started",
           "pages": ["guides/overview", "guides/configuration"]
-        },
-        {
-          "group": "Advanced",
-          "pages": ["guides/custom-domains", "guides/versioning"]
-        }
-      ]
-    },
-    {
-      "tab": "API Reference",
-      "groups": [
-        {
-          "group": "Endpoints",
-          "pages": ["api-reference/introduction", "api-reference/authentication"]
         }
       ]
     }
